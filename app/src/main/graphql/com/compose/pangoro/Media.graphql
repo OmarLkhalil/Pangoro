@@ -1,0 +1,13 @@
+query Media {
+    Page(perPage: 10){
+        media(type: ANIME, sort: TRENDING_DESC){
+            id
+            title {
+                romaji
+            }
+            coverImage {
+                large
+            }
+        }
+    }
+}
