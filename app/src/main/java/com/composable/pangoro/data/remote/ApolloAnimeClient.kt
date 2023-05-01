@@ -14,7 +14,7 @@ class ApolloAnimeClient(private val apolloClient: ApolloClient): AnimeTrendingRe
                 media?.let {
                     Anime(
                         id = it.id,
-                        title = "${it.title}",
+                        title = it.title?.romaji.orEmpty(),
                         coverImageUrl = media.coverImage?.large.orEmpty()
                     )
                 }

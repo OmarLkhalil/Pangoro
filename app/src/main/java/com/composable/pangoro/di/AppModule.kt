@@ -2,6 +2,7 @@ package com.composable.pangoro.di
 
 import com.apollographql.apollo3.ApolloClient
 import com.composable.pangoro.data.remote.ApolloAnimeClient
+import com.composable.pangoro.domain.repository.AnimeTrendingRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,4 +27,8 @@ class AppModule {
         return ApolloAnimeClient(apolloClient)
     }
 
+    @Provides
+    fun provideRepo(animeClient: ApolloAnimeClient): AnimeTrendingRepository {
+        return animeClient
+    }
 }
