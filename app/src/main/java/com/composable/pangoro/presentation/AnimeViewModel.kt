@@ -13,11 +13,16 @@ import javax.inject.Inject
 
 
 @HiltViewModel
-class AnimeViewModel  @Inject constructor (private val repo: AnimeTrendingRepository) :ViewModel() {
+class AnimeViewModel @Inject constructor(private val repo: AnimeTrendingRepository) : ViewModel() {
 
     private val _state = MutableStateFlow(AnimeState())
     val state = _state.asStateFlow()
+
     init {
+        getTrendingAnime()
+    }
+
+    private fun getTrendingAnime() {
         viewModelScope.launch {
             _state.update {
                 it.copy(isLoading = true)
@@ -26,8 +31,9 @@ class AnimeViewModel  @Inject constructor (private val repo: AnimeTrendingReposi
                 it.copy(animes = repo.getTrendingAnime(), isLoading = false)
             }
         }
-}
-data class AnimeState(
+    }
+
+    data class AnimeState(
         val isLoading: Boolean = true,
         val animes: List<Anime> = emptyList(),
         val error: String = ""

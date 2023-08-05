@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.composable.pangoro.presentation.AnimeListScreen
+import com.composable.pangoro.presentation.screens.AnimeListScreen
 import com.composable.pangoro.presentation.AnimeViewModel
 import com.composable.pangoro.ui.theme.PangoroTheme
 import dagger.hilt.android.AndroidEntryPoint
