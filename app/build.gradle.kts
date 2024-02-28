@@ -78,7 +78,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest:$compose_ui_version")
     implementation("com.apollographql.apollo3:apollo-runtime:3.7.3")
 
-    implementation("com.google.dagger:hilt-android:2.44.2")
+    implementation("com.google.dagger:hilt-android:2.51")
     kapt("com.google.dagger:hilt-android-compiler:2.44.2")
     kapt("androidx.hilt:hilt-compiler:1.0.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
