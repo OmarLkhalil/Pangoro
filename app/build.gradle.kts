@@ -76,7 +76,7 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:$compose_ui_version")
     debugImplementation("androidx.compose.ui:ui-tooling:$compose_ui_version")
     debugImplementation("androidx.compose.ui:ui-test-manifest:$compose_ui_version")
-    implementation("com.apollographql.apollo3:apollo-runtime:3.7.3")
+    implementation("com.apollographql.apollo3:apollo-runtime:3.8.3")
 
     implementation("com.google.dagger:hilt-android:2.44.2")
     kapt("com.google.dagger:hilt-android-compiler:2.44.2")
